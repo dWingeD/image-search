@@ -1,0 +1,19 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName  = 'com.dwinged.boof.Main'
+
+repositories {
+    mavenCentral()
+}
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Search-Image: BoofCV',
+                'Implementation-Version': '0.1',
+                'Main-Class': mainClassName
+    }
+}
+
+dependencies {
+}
