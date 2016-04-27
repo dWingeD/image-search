@@ -13,7 +13,11 @@ jar {
                 'Implementation-Version': '0.1',
                 'Main-Class': mainClassName
     }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
 }
 
 dependencies {
+    compile group: 'org.boofcv', name: 'all', version: '0.23'
 }
